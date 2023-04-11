@@ -1,8 +1,9 @@
-import { Container } from "./styles";
+import { FiMail, FiLock } from "react-icons/fi"
 
 import { Input } from "../../components/Input"
-import { FiLogIn, FiMail, FiLock} from "react-icons/fi"
+import { Button } from "../../components/Button"
 
+import { Container, Form } from "./styles";
  
 export function SingIn(){
   return(
@@ -12,13 +13,27 @@ export function SingIn(){
         <p>Aplicação para salvar e gerenciar seus links úteis.</p>
 
         <h2>Faça seu login</h2>
+
+        <Input
+          placeholder = "E-mail"
+          type = "text"
+          icon= { FiMail }
+        />
+        
+        <Input
+          placeholder = "Senha"
+          type = "password"
+          icon= { FiLock }
+        />
+
+        <Button title= "Entrar" />
+
+        <a href="#">
+          Criar conta
+        </a>
+
       </Form>
 
-      <Input
-        placeholder = "E-mail"
-        type = "text"
-        icon= { FiLogIn }
-      />
     </Container>
   );
 }
